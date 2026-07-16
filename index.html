@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mute Will Buxton | The Stakes Have Never Been Quieter</title>
+    <meta
+      name="description"
+      content="A satirical marketing site for fictional software that mutes Will Buxton during IndyCar broadcasts."
+    >
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header" data-elevate>
+      <a class="brand" href="#top" aria-label="Mute Will Buxton home">
+        <span class="brand-mark" aria-hidden="true">
+          <span></span>
+        </span>
+        <span>Mute Will Buxton</span>
+      </a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="#detector">Detector</a>
+        <a href="#demo">Demo</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <a class="nav-cta" href="#waitlist">Join beta</a>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <img
+          class="hero-image"
+          src="assets/hero-console.png"
+          alt="A fictional motorsport broadcast audio console with waveform displays and illuminated mute controls."
+        >
+        <div class="hero-shade" aria-hidden="true"></div>
+        <div class="hero-content">
+          <p class="eyebrow">Satirical race-day audio control</p>
+          <h1 id="hero-title">Mute Will Buxton</h1>
+          <p class="hero-copy">
+            Real-time IndyCar commentary suppression for the exact moment
+            the stakes have never been higher, the tension is palpable, and
+            your living room just needs ten blessed seconds of engine noise.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#demo">Try the silence</a>
+            <a class="button secondary" href="#detector">See phrases</a>
+          </div>
+          <div class="signal-row" aria-label="Product highlights">
+            <span>Catchphrase-aware</span>
+            <span>Driver radio safe</span>
+            <span>Zero broadcast affiliations</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="ticker" aria-label="Live parody status">
+        <div class="ticker-track">
+          <span>Now detecting: "the stakes have never been higher"</span>
+          <span>Muted: dramatic pause escalation</span>
+          <span>Passthrough: engines, spotters, strategy calls</span>
+          <span>Alert: "this changes everything" cluster forming</span>
+        </div>
+      </section>
+
+      <section class="section intro" id="detector" aria-labelledby="detector-title">
+        <div class="section-kicker">The product</div>
+        <div class="intro-grid">
+          <div>
+            <h2 id="detector-title">A commentary limiter for when the plot simply will not thicken.</h2>
+          </div>
+          <p>
+            Mute Will Buxton is software with one sacred mission:
+            preserve the sounds of IndyCar while gently ducking the broadcast's
+            most operatic flourishes. It is unfair, unnecessary, and somehow
+            exactly what the second screen economy has been building toward.
+          </p>
+        </div>
+        <div class="phrase-board" aria-label="Detected phrases">
+          <article>
+            <span class="phrase-level high">High risk</span>
+            <h3>"The stakes have never been higher"</h3>
+            <p>Auto-ducks for 8.4 seconds or until the leader pits.</p>
+          </article>
+          <article>
+            <span class="phrase-level medium">Escalating</span>
+            <h3>"This changes everything"</h3>
+            <p>Soft mute with a tasteful tire squeal crossfade.</p>
+          </article>
+          <article>
+            <span class="phrase-level low">Manageable</span>
+            <h3>"There is everything to play for"</h3>
+            <p>Warns nearby viewers before the next championship permutation.</p>
+          </article>
+          <article>
+            <span class="phrase-level medium">Volatile</span>
+            <h3>"The margins are so fine"</h3>
+            <p>Reduces metaphor density while preserving genuine race data.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section workbench" id="demo" aria-labelledby="demo-title">
+        <div class="demo-copy">
+          <div class="section-kicker">Live demo</div>
+          <h2 id="demo-title">Dial down the drama. Keep the race.</h2>
+          <p>
+            Tune the detection model, arm the mute gate, and watch
+            the broadcast transcript become a calmer place to spend a Sunday.
+          </p>
+          <ul class="check-list" aria-label="Demo capabilities">
+            <li>Phrase detection trained on grand finals energy.</li>
+            <li>Engine, radio, and pit-wall audio stays untouched.</li>
+            <li>Emergency override for actual useful context.</li>
+          </ul>
+        </div>
+
+        <div class="demo-panel" aria-label="Mute Will Buxton control panel">
+          <div class="panel-header">
+            <div>
+              <span class="status-dot" aria-hidden="true"></span>
+              <strong>MWB Filter</strong>
+            </div>
+            <span class="panel-state" id="panel-state">Monitoring</span>
+          </div>
+
+          <div class="meter-group" aria-label="Audio levels">
+            <div class="meter">
+              <span>Race audio</span>
+              <i style="--level: 84%"></i>
+            </div>
+            <div class="meter">
+              <span>Commentary</span>
+              <i id="commentary-meter" style="--level: 72%"></i>
+            </div>
+            <div class="meter">
+              <span>Jeopardy</span>
+              <i id="jeopardy-meter" style="--level: 91%"></i>
+            </div>
+          </div>
+
+          <label class="range-control" for="intensity">
+            <span>Buxton intensity</span>
+            <output id="intensity-output" for="intensity">72%</output>
+          </label>
+          <input id="intensity" class="range" type="range" min="0" max="100" value="72">
+
+          <div class="toggles">
+            <label>
+              <input type="checkbox" checked>
+              <span></span>
+              Catchphrase gate
+            </label>
+            <label>
+              <input type="checkbox" checked>
+              <span></span>
+              Save driver radio
+            </label>
+            <label>
+              <input type="checkbox">
+              <span></span>
+              Monaco mode
+            </label>
+          </div>
+
+          <div class="transcript" aria-live="polite">
+            <p><b>Lap 41:</b> <span data-original="The stakes have never been higher.">The stakes have never been higher.</span></p>
+            <p><b>Lap 42:</b> <span data-original="This changes everything for the championship.">This changes everything for the championship.</span></p>
+            <p><b>Lap 43:</b> <span data-original="The margins are so fine at this level.">The margins are so fine at this level.</span></p>
+          </div>
+
+          <button class="mute-button" type="button" id="mute-button" aria-pressed="false">
+            <span class="mute-icon" aria-hidden="true"></span>
+            Engage Buxton mute
+          </button>
+        </div>
+      </section>
+
+      <section class="section steps" aria-labelledby="steps-title">
+        <div class="section-kicker">How it works</div>
+        <h2 id="steps-title">Four stages of extremely serious audio science.</h2>
+        <div class="step-grid">
+          <article>
+            <span>01</span>
+            <h3>Listen</h3>
+            <p>Runs alongside your stream and analyzes commentary cadence in real time.</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>Detect</h3>
+            <p>Flags phrase clusters like "palpable tension" before they bloom.</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>Duck</h3>
+            <p>Applies a polite mute curve, leaving crowd, cars, and chaos intact.</p>
+          </article>
+          <article>
+            <span>04</span>
+            <h3>Restore</h3>
+            <p>Returns commentary once the jeopardy index drops below unbearable.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section quotes" aria-label="Imaginary customer quotes">
+        <figure>
+          <blockquote>
+            "For the first time in years, I heard the tires. I did not know they still made noise."
+          </blockquote>
+          <figcaption>Beta tester, Turn 1 sofa section</figcaption>
+        </figure>
+        <figure>
+          <blockquote>
+            "It took the phrase 'everything to play for' and gave me something to live for."
+          </blockquote>
+          <figcaption>Imaginary race fan, refreshingly offline</figcaption>
+        </figure>
+      </section>
+
+      <section class="section pricing" id="pricing" aria-labelledby="pricing-title">
+        <div class="section-kicker">Pricing</div>
+        <h2 id="pricing-title">Choose your level of tranquility.</h2>
+        <div class="pricing-grid">
+          <article>
+            <h3>Free Practice</h3>
+            <p class="price">$0</p>
+            <p>Manual mute reminders and one complimentary eye roll.</p>
+            <a class="plan-link" href="#waitlist">Start quietly</a>
+          </article>
+          <article class="featured-plan">
+            <h3>Race Day</h3>
+            <p class="price">$7</p>
+            <p>Automatic catchphrase ducking, jeopardy scoring, and pit-stop calm.</p>
+            <a class="plan-link" href="#waitlist">Most merciful</a>
+          </article>
+          <article>
+            <h3>Final Lap</h3>
+            <p class="price">$23</p>
+            <p>Maximum stakes protection with ceremonial silence for restarts.</p>
+            <a class="plan-link" href="#waitlist">Arm everything</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="section faq" id="faq" aria-labelledby="faq-title">
+        <div class="section-kicker">FAQ</div>
+        <h2 id="faq-title">Questions from race control.</h2>
+        <details>
+          <summary>Is this real?</summary>
+          <p>Not yet. This is a parody website for a fictional product, which is legally distinct from a cry for help.</p>
+        </details>
+        <details>
+          <summary>Does it mute the whole broadcast?</summary>
+          <p>No. In our architecture, the cars, radios, crowd, and useful commentary survive. Only excessive narrative weather systems get ducked.</p>
+        </details>
+        <details>
+          <summary>Is this affiliated with Will Buxton, IndyCar, or any broadcaster?</summary>
+          <p>No. It is a fan-made satirical concept and is not endorsed by, sponsored by, or affiliated with any person, series, team, or network.</p>
+        </details>
+      </section>
+
+      <section class="waitlist" id="waitlist" aria-labelledby="waitlist-title">
+        <div>
+          <p class="eyebrow">Coming eventually, allegedly</p>
+          <h2 id="waitlist-title">The stakes have never been quieter.</h2>
+        </div>
+        <form class="waitlist-form">
+          <label class="sr-only" for="email">Email address</label>
+          <input id="email" type="email" placeholder="you@racefan.example" autocomplete="email">
+          <button class="button primary" type="submit">Join beta</button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Mute Will Buxton is a satirical concept. No live broadcasts were harmed, improved, or meaningfully altered.</p>
+      <a href="#top">Back to top</a>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
